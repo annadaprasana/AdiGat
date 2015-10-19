@@ -10,5 +10,14 @@
     <string name="minus_sign_icon">Minus Sign Icon</string>
     <string name="no_order">Go to menu for order! </string>
     <string name="food_image">Food Image</string>
+    <string name="food_name">Name:</string>
+    <string name="food_price">Price:</string>
+    <string name="no_of_items">Plates:</string>
+    <string name="food_desc">Description:</string>
+    <string name="about_contents">AgiGat</string>
+    <string name="no_account">No account yet? Create one</string>
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
 
 </resources>

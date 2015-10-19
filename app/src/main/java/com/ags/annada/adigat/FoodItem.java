@@ -6,7 +6,7 @@ import android.graphics.drawable.Drawable;
  * Created by Annada on 23/09/2015.
  */
 public class FoodItem {
-    private static final String TAG = "FoodItem";
+    private static final String TAG = FoodItem.class.getSimpleName();
 
     public int mNoOfPlates = 0;
     public String mFoodTitle = null;

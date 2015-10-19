@@ -2,27 +2,63 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/frame">
+    android:layout_height="match_parent">
 
-    <TextView
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:id="@+id/imageLayout">
+        <ImageView
+            android:id="@+id/food_image"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:contentDescription="@string/food_image"/>
+    </LinearLayout>
+
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/foodTitle"
-        android:textColor="#1613ff"
-        android:layout_gravity="center_vertical"
-        android:textSize="@dimen/text_size"
-        android:textStyle="bold|italic" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/noOfPlates"
-        android:layout_gravity="center_vertical"
+        android:layout_toRightOf="@+id/imageLayout"
         android:paddingLeft="5dp"
-        android:paddingRight="5dp"
-        android:textColor="#ff2b29"
-        android:textStyle="bold" />
+        android:paddingRight="5dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/food_title_layout"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+            <TextView
+                android:id="@+id/foodTitle"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold|italic"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/noOfItemsLayout"
+            android:orientation="horizontal"
+            android:layout_below="@id/food_title_layout"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="@string/no_of_items"
+                android:textSize="12sp" />
+            <TextView
+                android:id="@+id/noOfItems"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -30,22 +66,12 @@
         android:gravity="right">
 
         <ImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:id="@+id/foodItemIcon"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:id="@+id/remove_image"
             android:layout_gravity="center_vertical"
             android:layout_marginRight="5dp"
             android:layout_marginTop="5dp"
-            android:contentDescription="@string/foodItem_icon" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/minusSignIcon"
-            android:layout_gravity="center_vertical"
-            android:layout_marginRight="5dp"
-            android:layout_marginTop="5dp"
-            android:contentDescription="@string/minus_sign_icon"
-            android:src="@mipmap/minus"/>
+            android:contentDescription="@string/minus_sign_icon"/>
     </LinearLayout>
 </LinearLayout>

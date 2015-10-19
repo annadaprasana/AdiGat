@@ -4,10 +4,10 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <ListView
+    <!--ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@android:id/list" />
+        android:id="@android:id/list" /-->
 
     <ViewStub
         android:id="@android:id/empty"
@@ -24,5 +24,11 @@
         android:textColor="#ff2229"
         android:layout_gravity="center"
         android:gravity="center" /-->
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recycler_view"
+        />
 
 </LinearLayout>

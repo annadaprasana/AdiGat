@@ -8,16 +8,19 @@ import com.ags.annada.adigat.database.FoodItemDataSource;
  * Created by Annada on 27/09/2015.
  */
 public class AdigetApp extends Application{
+    private static final String TAG = AdigetApp.class.getSimpleName();
 
     //private FoodItemOpenHelper mFoodItemOpenHelper;
-    private FoodItemDataSource mFoodItemDataSource;
-    String[] mFoodItems = {"Chicken","Lamb","Fish","Rice","Dal"};
-    double[] mPrice = {5.30,6.30,7.25,8.65,2.90};
+    //private FoodItemDataSource mFoodItemDataSource;
+    //String[] mFoodItems = {"Chicken","Lamb","Fish","Rice","Dal"};
+    //double[] mPrice = {5.30,6.30,7.25,8.65,2.90};
 
     @Override
     public void onCreate() {
         super.onCreate();
 
+        //This code moves to StoreInDBService
+        /*
         //mFoodItemOpenHelper = new FoodItemOpenHelper(getApplicationContext());
         mFoodItemDataSource = new FoodItemDataSource(getApplicationContext());
         mFoodItemDataSource.open();
@@ -27,9 +30,10 @@ public class AdigetApp extends Application{
         mFoodItemDataSource.insert(mFoodItems[2],mPrice[2]);
         mFoodItemDataSource.insert(mFoodItems[3],mPrice[3]);
         mFoodItemDataSource.insert(mFoodItems[4],mPrice[4]);
+        */
     }
 
-    public FoodItemDataSource getFoodItemDataSource(){
-        return mFoodItemDataSource;
-    }
+    //public FoodItemDataSource getFoodItemDataSource(){
+        //return mFoodItemDataSource;
+    //}
 }
